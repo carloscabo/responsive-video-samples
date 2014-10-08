@@ -103,6 +103,7 @@ body {
     background-size: cover;
     overflow: hidden; }
     .box .video-bg-wrapper > video {
+      display: none;
       min-width: 100%;
       min-height: 100%;
       width: auto;

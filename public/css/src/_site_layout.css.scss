@@ -26,6 +26,7 @@ body {
     background-size: cover;
     overflow: hidden;
     > video {
+      display: none; // Hidden until loaded, then displayed in the JS
       min-width: 100%;
       min-height: 100%;
       width: auto;

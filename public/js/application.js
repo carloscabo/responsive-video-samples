@@ -1,23 +1,36 @@
 $(document).ready(function() {
 
-  // Centers the video element to its parent container
-  function video_bg_center_v() {
-    $('video.js-video-bg-autocenter').each(function(index, el) {
-      var
-        pw = $(el).parent().outerWidth(),
-        ph = $(el).parent().outerHeight(),
-        ew = $(el).outerWidth(),
-        eh = $(el).outerHeight();
-      $(el).css({
-        'margin-top': ((eh/2)-(ph/2))*(-1),
-        'margin-left': ((ew/2)-(pw/2))*(-1)
-      });
+  // Function that centers an element to its parent
+  // setting margin-top, and margin-left
+  // Usage:
+  // $('selector').center_on_parent();
+  $.fn.center_on_parent = function() {
+    return this.each(function() {
+      new cop(this);
     });
-  }
-  video_bg_center_v();
+    function cop(el){
+      var
+        $el = $(el),
+        pw =  $el.parent().outerWidth(),
+        ph =  $el.parent().outerHeight(),
+        vw =  $el.outerWidth(),
+        vh =  $el.outerHeight();
+      $el.css({
+        'margin-top': ((vh/2)-(ph/2))*(-1),
+        'margin-left': ((vw/2)-(pw/2))*(-1)
+      });
+    }
+  };
 
+  // Binds the loadeddata event from the video element to Jquery
+  // The centers the video and shows it.
+  $('video.js-video-bg-autocenter').bind('loadeddata', function(e) {
+    $(this).center_on_parent().show();
+  });
+
+  // We "recenter" the video when window its resized
   $(window).resize(function() {
-    video_bg_center_v();
+    $('video.js-video-bg-autocenter').center_on_parent();
   });
 
 });
