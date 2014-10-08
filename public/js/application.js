@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
   // Centers the video element to its parent container
-  function v_center_videos() {
-    $('video.js-autocenter').each(function(index, el) {
+  function video_bg_center_v() {
+    $('video.js-video-bg-autocenter').each(function(index, el) {
       var
         pw = $(el).parent().outerWidth(),
         ph = $(el).parent().outerHeight(),
@@ -14,10 +14,10 @@ $(document).ready(function() {
       });
     });
   }
-  v_center_videos();
+  video_bg_center_v();
 
   $(window).resize(function() {
-    v_center_videos();
+    video_bg_center_v();
   });
 
 });
