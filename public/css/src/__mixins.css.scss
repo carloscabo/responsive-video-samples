@@ -1,0 +1,96 @@
+//
+// Mixins / Helpers
+//
+
+// @include clearfix()
+@mixin clearfix {
+  &:after {
+    content:"";
+    display:table;
+    clear:both;
+  }
+}
+
+// @extend %clearfix
+%clearfix {
+  &:after {
+    content:"";
+    display:table;
+    clear:both;
+  }
+}
+
+.clearfix:after {
+  content:"";
+  display:table;
+  clear:both;
+}
+
+@mixin opacity ($value: 0.5) {
+  opacity: $value;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" $value * 100 ")";
+  // filter: alpha(opacity= $value * 100 );
+  zoom: 1;
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $left $top $blur $color;
+    -moz-box-shadow:inset $left $top $blur $color;
+    box-shadow:inset $left $top $blur $color;
+  } @else {
+    -webkit-box-shadow: $left $top $blur $color;
+    -moz-box-shadow: $left $top $blur $color;
+    box-shadow: $left $top $blur $color;
+  }
+}
+
+@mixin svg-bg($name) {
+  background-image: image-url('png/#{$name}.png');
+  background-image: none, image-url('svg/#{$name}.svg');
+}
+
+//
+// Comunes, reutilizados, misc */
+//
+._h,
+.hidden {
+  display:none !important;
+}
+
+// Invisible
+._i,
+.i {
+  opacity: 0.0;
+  -ms-filter: "alpha(opacity=0)";
+  -khtml-opacity: 0.0;
+  -moz-opacity: 0.0;
+}
+
+// Emboss
+._e,
+.e {
+  color:#4c4c4c;
+  text-shadow: -1px -1px 1px #4b4b4b;
+  text-shadow: 1px 1px 1px #8b8b8b;
+}
+
+// Redondeado
+._r,
+.r {
+  border-radius:4px;
+}
+
+// Sombra
+._s,
+.s {
+  // x-offset, y-offset, radio, color
+  -moz-box-shadow: 0px 4px 5px #000000;
+  -webkit-box-shadow: 0px 4px 5px #000000;
+  box-shadow:0px 4px 5px #000000;
+}
+
+// Separador / legacy
+/*<div class="sp"><hr /></div>*/
+/* hr { clear:both; display:none; height:1px; width:100%; }
+div.sp { clear:both; height:1px; } */

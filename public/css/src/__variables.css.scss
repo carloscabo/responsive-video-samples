@@ -1,0 +1,53 @@
+//
+// Variables
+//
+
+// General
+$debug: true;
+
+// Solarized dark
+$sol_black_00: #002b36; // dark black
+$sol_black_01: #073642; // black
+
+$sol_grey_00: #586e75; // grey darker
+$sol_grey_01: #657b83;
+$sol_grey_02: #839496;
+$sol_grey_03: #93a1a1; // grey lighter
+
+$sol_white_00: #eee8d5; // white
+$sol_white_01: #fdf6e3; // bright white
+
+$sol_yellow:  #b58900; //yellow
+$sol_orange:  #cb4b16; //brred
+$sol_red:     #d30102; //red
+$sol_magenta: #d33682; //magenta
+$sol_violet:  #6c71c4; //brmagenta
+$sol_blue:    #268bd2; //blue
+$sol_cyan:    #2aa198; //cyan
+$sol_green:   #859900; //green
+
+// Base 16
+// https://github.com/chriskempson/base16
+$base_00: #090300; // Black
+$base_01: #3a3432;
+$base_02: #4a4543;
+$base_03: #5c5855;
+$base_04: #807d7c;
+$base_05: #a5a2a2;
+$base_06: #d6d5d4;
+$base_07: #f7f7f7; // White
+$base_08: #db2d20; // Red
+$base_09: #e8bbd0; // Orange
+$base_0A: #fded02; // Yellow
+$base_0B: #01a252; // Green
+$base_0C: #b5e4f4; // Cyan
+$base_0D: #01a0e4; // Blue
+$base_0E: #a16a94; // Purple
+$base_0F: #cdab53; // Brown
+
+// Bourbon grid
+$fg-column: 81px;    // Column Width
+$fg-gutter: 16px;    // Gutter Width
+$fg-max-columns: 12; // Total Columns For Main Container
+$fg-max-w: $fg-max-columns * $fg-column + ($fg-max-columns - 1) * $fg-gutter; // 1148
+$fg-min-w: 960px;
