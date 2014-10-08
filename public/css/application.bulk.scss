@@ -5,21 +5,45 @@
 // General
 $debug: true;
 
-// Colores
-$color_blue: #27A1E0;
-$color_light_blue: #68BDE9;
+// Solarized dark
+$sol_black_00: #002b36; // dark black
+$sol_black_01: #073642; // black
 
-$color_magenta: #DF167D;
-$color_light_magenta: #E95CA4;
+$sol_grey_00: #586e75; // grey darker
+$sol_grey_01: #657b83;
+$sol_grey_02: #839496;
+$sol_grey_03: #93a1a1; // grey lighter
 
-$color_lime: #C4CE36;
-$color_light_lime: #D6DD73;
+$sol_white_00: #eee8d5; // white
+$sol_white_01: #fdf6e3; // bright white
 
-$color_grey_a: #F0F2F3; // Page background
-$color_grey_b: #E2E5E7;
-$color_grey_c: #B0B5BC;
-$color_grey_d: #697280;
-$color_grey_e: #384047; // Footer background / text-color
+$sol_yellow:  #b58900; //yellow
+$sol_orange:  #cb4b16; //brred
+$sol_red:     #d30102; //red
+$sol_magenta: #d33682; //magenta
+$sol_violet:  #6c71c4; //brmagenta
+$sol_blue:    #268bd2; //blue
+$sol_cyan:    #2aa198; //cyan
+$sol_green:   #859900; //green
+
+// Base 16
+// https://github.com/chriskempson/base16
+$base_00: #090300; // Black
+$base_01: #3a3432;
+$base_02: #4a4543;
+$base_03: #5c5855;
+$base_04: #807d7c;
+$base_05: #a5a2a2;
+$base_06: #d6d5d4;
+$base_07: #f7f7f7; // White
+$base_08: #db2d20; // Red
+$base_09: #e8bbd0; // Orange
+$base_0A: #fded02; // Yellow
+$base_0B: #01a252; // Green
+$base_0C: #b5e4f4; // Cyan
+$base_0D: #01a0e4; // Blue
+$base_0E: #a16a94; // Purple
+$base_0F: #cdab53; // Brown
 
 // Bourbon grid
 $fg-column: 81px;    // Column Width
@@ -294,100 +318,49 @@ div.sp { clear:both; height:1px; } */
 $footer_height: 150px;
 
 html {
-  background: url(../img/bg_html.png) center top repeat-y #000;
   background: #f0F;
 }
 
 body {
-  /* Ojo nunca repeat-y!!!, se cortará */
-  background: url(../img/bg_body.png) center top repeat-x;
+  padding: 20px;
 }
 
-//
-// Header
-//
-header#arriba {
-	height: 250px;
-	text-align: center;
-	background: url(../img/bg_header.png) center top repeat-y;
-}
-
-div#h-interior {
-	height: 250px;
-	clear: both;
-	margin: auto;
-	text-align: left;
-	background: url(../img/bg_header_interior.png) 0 0 repeat;
-}
-
-//
-// Main blocks
-//
-#contenedor {
-  width:100%;
-
-  /* =STICKY. Set footer height. */
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  margin:0 auto (-$footer_height) auto;
-  /* =STICKY */
-
-  background: url(../img/bg_contenedor.png) center top repeat-y;
-  position: relative; /* ADDED FOR #bgfix BELOW */
-}
-
-#bgfix {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: url(../img/bg_xtra.png) center top repeat-y;
-  z-index: -1;
-}
-
-//
-// Main content
-//
-section#main {
-  width: flex-grid(12);
-  margin: auto;
-  padding: 0 0 48px 0;
-  clear: both;
-	overflow: hidden;
-
-  background-color: #0F0;
-  background: url(../img/bg_main_narrow.png) center top repeat-y;
-
-  text-align: left;
-}
-
-//
-// Sticky footer
-//
-.push {
-	/* =STICKY. Set footer height. */
-	height: $footer_height;
-	/* =STICKY */
-
-}
-
-footer#sticky {
-	/* =STICKY. Set footer height. */
-	height: $footer_height;
-	clear: both;
-	background: url(../img/bg_footer.png) center top repeat-y;
-}
-
-.footer_contents {
-	height: $footer_height;
-	clear: both;
-	margin: auto;
-	text-align: left;
-	background: url(../img/bg_footer_contents.png) 0 0 repeat;
-	/* background-color:#0fF; */
-	position: relative; /* Added so the links work fine in old IEs */
-}
-
-footer address {
-	/* footer styles go here */
+.box { // wrapper
+  max-width: 100%;
+  min-height: 400px;
+  margin: 0 auto;
+  position: relative;
+  background-color: #fff;
+  overflow: hidden;
+  .video-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: grey;
+    overflow: hidden;
+    > video {
+      /* top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; */
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: 1;
+      background-size: cover;
+    }
+  }
+  .content {
+    position: relative;
+    padding: 50px;
+    z-index: 2;
+    color: #fff;
+    p {
+      width: 50%;
+      font-size: 28px;
+    }
+  }
 }

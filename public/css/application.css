@@ -81,72 +81,42 @@ body {
 /* hr { clear:both; display:none; height:1px; width:100%; }
 div.sp { clear:both; height:1px; } */
 html {
-  background: url(../img/bg_html.png) center top repeat-y #000;
   background: #f0F; }
 
 body {
-  /* Ojo nunca repeat-y!!!, se cortará */
-  background: url(../img/bg_body.png) center top repeat-x; }
+  padding: 20px; }
 
-header#arriba {
-  height: 250px;
-  text-align: center;
-  background: url(../img/bg_header.png) center top repeat-y; }
-
-div#h-interior {
-  height: 250px;
-  clear: both;
-  margin: auto;
-  text-align: left;
-  background: url(../img/bg_header_interior.png) 0 0 repeat; }
-
-#contenedor {
-  width: 100%;
-  /* =STICKY. Set footer height. */
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  margin: 0 auto -150px auto;
-  /* =STICKY */
-  background: url(../img/bg_contenedor.png) center top repeat-y;
+.box {
+  max-width: 100%;
+  min-height: 400px;
+  margin: 0 auto;
   position: relative;
-  /* ADDED FOR #bgfix BELOW */ }
-
-#bgfix {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: url(../img/bg_xtra.png) center top repeat-y;
-  z-index: -1; }
-
-section#main {
-  width: 100%;
-  margin: auto;
-  padding: 0 0 48px 0;
-  clear: both;
-  overflow: hidden;
-  background-color: #0F0;
-  background: url(../img/bg_main_narrow.png) center top repeat-y;
-  text-align: left; }
-
-.push {
-  /* =STICKY. Set footer height. */
-  height: 150px;
-  /* =STICKY */ }
-
-footer#sticky {
-  /* =STICKY. Set footer height. */
-  height: 150px;
-  clear: both;
-  background: url(../img/bg_footer.png) center top repeat-y; }
-
-.footer_contents {
-  height: 150px;
-  clear: both;
-  margin: auto;
-  text-align: left;
-  background: url(../img/bg_footer_contents.png) 0 0 repeat;
-  /* background-color:#0fF; */
-  position: relative;
-  /* Added so the links work fine in old IEs */ }
-
+  background-color: #fff;
+  overflow: hidden; }
+  .box .video-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: grey;
+    overflow: hidden; }
+    .box .video-wrapper > video {
+      /* top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; */
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: 1;
+      background-size: cover; }
+  .box .content {
+    position: relative;
+    padding: 50px;
+    z-index: 2;
+    color: #fff; }
+    .box .content p {
+      width: 50%;
+      font-size: 28px; }
