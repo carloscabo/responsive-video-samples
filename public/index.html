@@ -16,21 +16,33 @@
 
   <div class="box">
     <div class="video-bg ar-16-9">
-      <video id="video-pure-html5" autoplay="play" preload="auto" loop="loop" poster="/img/polina.png">
-        <source src="img/polina.mp4" type="video/mp4">
-        <source src="img/polina.webm" type="video/webm">
+      <video id="video-pure-html5" width="auto" height="auto"
+        controls
+        preload="auto"
+        loop="loop"
+        poster="/img/sample.png">
+        <source src="img/sample.mp4" type="video/mp4">
+        <source src="img/sample.webm" type="video/webm">
+        <!-- <source src="img/sample.ogv" type="video/ogg"> -->
       </video>
       <div class="content">dsdsdsd</div>
     </div>
-    <p>Es impoprtante que la proporción del vídeo y la de video-bg sean la misma para el responsive</p>
+    <p>Es importante que la proporción del vídeo y la de video-bg sean la misma para el responsive</p>
   </div>
 
   <div class="box">
-    <video id="video-js" autoplay="play" class="video-bg ar-16-9 video-js vjs-default-skin vjs-big-play-centered"
-  controls preload="auto" width="auto" height="auto" poster="/img/polina.png"
-  data-setup='{"example_option":true}'>
-      <source src="img/polina.mp4" type="video/mp4">
-      <source src="img/polina.webm" type="video/webm">
+    <video id="video-js" width="auto" height="auto"
+      class="video-bg ar-16-9 video-js vjs-default-skin vjs-big-play-centered"
+      controls
+      preload="auto"
+      autoplay="play"
+      loop="loop"
+      muted="true"
+      poster="/img/sample.png"
+      data-setup='{"example_option":true}'>
+      <source src="img/sample.mp4" type="video/mp4">
+      <source src="img/sample.webm" type="video/webm">
+      <!-- <source src="img/sample.ogv" type="video/ogg"> -->
     </video>
   </div>
 
