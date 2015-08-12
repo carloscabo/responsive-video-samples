@@ -318,7 +318,7 @@ div.sp { clear:both; height:1px; } */
 $footer_height: 150px;
 
 html {
-  background: #f0F;
+  background: #fef;
 }
 
 body {
@@ -326,13 +326,59 @@ body {
 }
 
 .box { // wrapper
-  max-width: 100%;
-  min-height: 400px;
-  margin: 0 auto;
+  max-width: 720px;
+  margin: 0 auto 32px auto;
   position: relative;
   background-color: #fff;
   overflow: hidden;
-  .video-bg-wrapper {
+}
+
+// Lo que es del vídeo está debajo
+
+.video-bg {
+  width: 100% !important; // Video.js tries to overwrite this
+  padding-top: 56.25%; // 16:9
+  position: relative;
+  background: url(/img/polina.png) center center no-repeat;
+  -webkit-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+
+  // Aspect ratio
+  &.ar-16-9 {
+    padding-top: 56.25%; // 16:9
+  }
+
+  > iframe,
+  > video {
+    // display: none; // Hidden until loaded, then displayed in the JS
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .content {
+    position: absolute;
+    padding: 50px;
+    z-index: 2;
+    color: #fff;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+
+    text-align: center;
+  }
+}
+
+
+/*   .video-bg-wrapper {
     position: absolute;
     top: 0;
     right: 0;
@@ -341,22 +387,5 @@ body {
     background: url(/img/bg-home.png) center center no-repeat;
     background-size: cover;
     overflow: hidden;
-    > video {
-      display: none; // Hidden until loaded, then displayed in the JS
-      min-width: 100%;
-      min-height: 100%;
-      width: auto;
-      height: auto;
-    }
-  }
-  .content {
-    position: relative;
-    padding: 50px;
-    z-index: 2;
-    color: #fff;
-    p {
-      width: 50%;
-      font-size: 28px;
-    }
-  }
-}
+
+  } */

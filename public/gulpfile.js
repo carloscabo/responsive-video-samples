@@ -43,21 +43,16 @@ gulp.task('css', function(){
 
 // ------------------------------------
 // Combine and compile JS
-gulp.task('js', function(){
+/*gulp.task('js', function(){
   gulp.src([
-    // 'js/src/jquery/jquery-1.9.1.min.js',
     'js/src/ready.js',
   ])
   .pipe(plumber())
   .pipe(concat('application.js'))
   .pipe(gulp.dest('js'))
   .pipe(size())
-  // .pipe(uglify())
-  // .pipe(rename({suffix: '.min'}))
-  // .pipe(gulp.dest('js'))
-  // .pipe(size())
   .pipe(livereload());
-});
+});*/
 
 // ------------------------------------
 // Grunt fileincludes
@@ -92,11 +87,11 @@ gulp.task('watch', function() {
   livereload.listen();
   gulp.watch(['./*.html'], ['html']);
   gulp.watch('./css/src/*', ['css']);
-  gulp.watch('./js/src/*', ['js']);
+  // gulp.watch('./js/src/*', ['js']);
   // gulp.watch(['./_sources/*', './_includes/*'], ['includes']);
 });
 
 
 // ------------------------------------
 // Default task code
-gulp.task('default', ['watch','css','js','connect']); //,'includes'
+gulp.task('default', ['watch','css','connect']); //,'includes'

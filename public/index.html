@@ -15,17 +15,37 @@
 <body class="op" id="www_dominio_com">
 
   <div class="box">
-    <div class="video-bg-wrapper">
-      <video autoplay="play" preload="auto" loop="loop" class="js-video-bg-autocenter">
-        <source src="img/bg-home.mp4" type="video/mp4">
+    <div class="video-bg ar-16-9">
+      <video id="video-pure-html5" autoplay="play" preload="auto" loop="loop" poster="/img/polina.png">
+        <source src="img/polina.mp4" type="video/mp4">
+        <source src="img/polina.webm" type="video/webm">
       </video>
+      <div class="content">dsdsdsd</div>
     </div>
-    <div class="content">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam eum ipsa nobis porro impedit doloremque perspiciatis placeat molestias, harum enim.</p>
+    <p>Es impoprtante que la proporción del vídeo y la de video-bg sean la misma para el responsive</p>
+  </div>
+
+  <div class="box">
+    <video id="video-js" autoplay="play" class="video-bg ar-16-9 video-js vjs-default-skin vjs-big-play-centered"
+  controls preload="auto" width="auto" height="auto" poster="/img/polina.png"
+  data-setup='{"example_option":true}'>
+      <source src="img/polina.mp4" type="video/mp4">
+      <source src="img/polina.webm" type="video/webm">
+    </video>
+  </div>
+
+  <div class="box">
+    <div class="video-bg ar-16-9">
+      <iframe id="video-yt-player" frameBorder="0"></iframe>
     </div>
   </div>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+  <!-- video.js -->
+  <link href="//vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
+  <script src="//vjs.zencdn.net/4.12/video.js"></script>
+
   <script src="/js/application.js"></script>
 
 </body>
