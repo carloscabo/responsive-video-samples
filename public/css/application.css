@@ -102,10 +102,10 @@ body {
   -o-background-size: cover;
   background-size: cover; }
   .video-bg.ar-16-9 {
-    padding-top: 56.25%; }
+    padding-top: 56.25% !important; }
   .video-bg.ar-4-3 {
-    padding-top: 56.25%; }
-  .video-bg > iframe, .video-bg > video {
+    padding-top: 75%; }
+  .video-bg iframe, .video-bg video {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -115,6 +115,12 @@ body {
     height: 100%; }
   .video-bg #video-pure-html5 {
     z-index: 9; }
+  .video-bg #video-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0; }
   .video-bg .content {
     position: absolute;
     padding: 50px;

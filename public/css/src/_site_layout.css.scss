@@ -30,14 +30,14 @@ body {
 
   // Aspect ratio
   &.ar-16-9 {
-    padding-top: 56.25%; // 16:9
+    padding-top: 56.25% !important; // 16:9
   }
   &.ar-4-3 {
-    padding-top: 56.25%; // 16:9
+    padding-top: 75%; // 4:3
   }
 
-  > iframe,
-  > video {
+  iframe,
+  video {
     // display: none; // Hidden until loaded, then displayed in the JS
     position: absolute;
     top: 0;
@@ -51,6 +51,14 @@ body {
   // Pure html5 video control arent clickble without this
   #video-pure-html5 {
     z-index: 9;
+  }
+
+  #video-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
   }
 
   .content {
