@@ -5,31 +5,62 @@
   <title>CSS HTML5 Video BG Cover</title>
 
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css"/>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/video.js/5.10.5/video-js.css"></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/video.js/5.10.5/video-js.css">
   <link rel="stylesheet" href="css/application.css"/>
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/video.js/5.10.5/video.js"></script>
-  <script src="js/src/bideo.js"></script>
-  <script src="js/src/ready.js"></script>
+  <script src="js/lib/bideo.js"></script>
+  <script src="js/ready.js"></script>
 
 </head>
 <body>
 
-  <div class="box">
-    <div class="video-bg ar-16-9">
-      <video id="video-pure-html5" width="auto" height="auto"
+  <div class="row">
+    <div class="wrapper">
+
+      <h2>Vídeo estándar en HTML5 sin ninguna mejora adicional</h2>
+
+        <video id="video-pure-html5" class="video-block" width="auto" height="auto"
+          autoplay="true"
+          muted="true"
+          controls="controls"
+          preload="auto"
+          loop="loop"
+          poster="img/sample.png">
+            <source src="img/sample.mp4" type="video/mp4">
+            <source src="img/sample.webm" type="video/webm">
+            <!-- <source src="img/sample.ogv" type="video/ogg"> -->
+          </video>
+
+        <p>Es importante que la proporción del vídeo y la de video-bg sean la misma para el responsive. Este vídeo es un <b>bloque</b> así que funciona directamente en responsive sin falta de hacer nada extraño.</p>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="wrapper">
+
+      <h2>Custom player useing <a href="http://videojs.com/" target="_blank">video.js</a></h2>
+
+      <video id="video-js"
+        class="video-js vjs-default-skin vjs-big-play-centered"
+        width="auto"
+        height="auto"
         controls="controls"
         preload="auto"
+        autoplay="play"
         loop="loop"
-        poster="/img/sample.png">
+        muted="true"
+        poster="img/sample.png"
+        data-setup='{"example_option":true}'>
         <source src="img/sample.mp4" type="video/mp4">
         <source src="img/sample.webm" type="video/webm">
-        <!-- <source src="img/sample.ogv" type="video/ogg"> -->
       </video>
-      <div class="content">dsdsdsd</div>
+
+      <p>Espacialmente indicado si necesitamos poner un player a medida o una funcionalidad avanzada. </p>
+
     </div>
-    <p>Es importante que la proporción del vídeo y la de video-bg sean la misma para el responsive</p>
   </div>
 
   <!-- <div class="box">
@@ -53,20 +84,7 @@
 
   <div class="box">
     <div class="video-bg ar-16-9">
-      <video id="video-js"
-        class="video-js vjs-default-skin vjs-big-play-centered"
-        width="auto"
-        height="auto"
-        controls="controls"
-        preload="auto"
-        autoplay="play"
-        loop="loop"
-        muted="true"
-        poster="/img/sample.png"
-        data-setup='{"example_option":true}'>
-        <source src="img/sample.mp4" type="video/mp4">
-        <source src="img/sample.webm" type="video/webm">
-      </video>
+
     </div>
   </div>
 

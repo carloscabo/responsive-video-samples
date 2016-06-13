@@ -3,9 +3,9 @@ $(document).ready(function() {
   console.log('eo');
 
   // Video.js settings
-  /*videojs("video-js").ready(function(){
+  videojs("video-js").ready(function(){
     myPlayer.muted(true);
-  });*/
+  });
 
   // Autohide vídeo-js controls if fail
   /*setTimeout(function(){

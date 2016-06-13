@@ -1,0 +1,48 @@
+html {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+body {
+  background-color: #f0f0f0;
+}
+
+.row {
+  width: 100%;
+  overflow: hidden;
+  padding: 32px 0;
+  border: 1px solid #ccc;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.video-container {
+  width: 100%;
+}
+
+video.video-block {
+  width: 100%;
+}
+
+// ####################################################################
+// Options for Video.js
+// ####################################################################
+
+.video-js {
+  padding-top: 56.25%; /* 16:9 */
+}
+.vjs-fullscreen {
+  padding-top: 0px
+}
+.video-js-dimensions {
+  width: 100%;
+  height: auto;
+}
