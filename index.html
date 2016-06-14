@@ -19,9 +19,9 @@
   <div class="row">
     <div class="wrapper">
 
-      <h2>Vídeo estándar en HTML5 sin ninguna mejora adicional</h2>
+      <h2>Sample A: Vídeo estándar en HTML5 sin ninguna mejora adicional</h2>
 
-        <video id="video-pure-html5" class="video-block" width="auto" height="auto"
+        <video id="video-sample-A" class="video-block" width="auto" height="auto"
           autoplay="true"
           muted="true"
           controls="controls"
@@ -33,7 +33,10 @@
             <!-- <source src="img/sample.ogv" type="video/ogg"> -->
           </video>
 
-        <p>Es importante que la proporción del vídeo y la de video-bg sean la misma para el responsive. Este vídeo es un <b>bloque</b> así que funciona directamente en responsive sin falta de hacer nada extraño.</p>
+        <p>Es importante que la proporción del vídeo y la de video-bg sean la misma para el responsive. Este vídeo es un <b>bloque</b> así que funciona directamente en responsive sin falta de hacer nada especial.</p>
+        <div class="actions">
+          <button id="video-sample-A-play">Play</button> <button id="video-sample-A-pause">Pause</button> <button id="video-sample-A-mute">Mute / Unmute</button>
+        </div>
 
     </div>
   </div>
@@ -41,10 +44,10 @@
   <div class="row">
     <div class="wrapper">
 
-      <h2>Custom player useing <a href="http://videojs.com/" target="_blank">video.js</a></h2>
+      <h2>Sample B: Custom player using <a href="http://videojs.com/" target="_blank">video.js</a></h2>
 
       <video id="video-js"
-        class="video-js vjs-default-skin vjs-big-play-centered"
+        class="video-js vjs-default-skin vjs-big-play-centered ar-16-9"
         width="auto"
         height="auto"
         controls="controls"
@@ -58,7 +61,7 @@
         <source src="img/sample.webm" type="video/webm">
       </video>
 
-      <p>Espacialmente indicado si necesitamos poner un player a medida o una funcionalidad avanzada. </p>
+      <p>Especialmente indicado si necesitamos poner un player a medida o una funcionalidad avanzada. Echa un ojo a los CSSs necesarios para hacerlo responsive en <b>layout.css</b></p>
 
     </div>
   </div>

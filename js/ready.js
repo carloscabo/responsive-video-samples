@@ -2,6 +2,31 @@ $(document).ready(function() {
   // La magia aquí
   console.log('eo');
 
+  // Smaple A
+  // If HTML5 video is supported nativelly
+  if(!!document.createElement('video').canPlayType) {
+    var
+      $vsA = $('#video-sample-A');
+    $(document)
+      .on('click', '#video-sample-A-play', function(e) {
+        e.preventDefault();
+        $vsA[0].play();
+      })
+      .on('click', '#video-sample-A-pause', function(e) {
+        e.preventDefault();
+        $vsA[0].pause();
+      })
+      .on('click', '#video-sample-A-mute', function(e) {
+        e.preventDefault();
+        if ( $vsA[0].muted ) {
+          $vsA.prop('muted', false); //unmute
+        } else {
+          $vsA.prop('muted', true); //mute
+        }
+      });
+  }
+
+
   // Video.js settings
   videojs("video-js").ready(function(){
     myPlayer.muted(true);
