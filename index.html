@@ -48,8 +48,6 @@
 
       <video id="video-js"
         class="video-js vjs-default-skin vjs-big-play-centered ar-16-9"
-        width="auto"
-        height="auto"
         controls="controls"
         preload="auto"
         autoplay="play"
@@ -87,37 +85,19 @@
     </div>
   </div>
 
-  <!-- <div class="box">
-    <div class="video-bg ar-16-9">
-      <video id="video-js"
-        class="video-js vjs-default-skin vjs-big-play-centered"
-        width="auto"
-        height="auto"
-        controls="controls"
-        preload="auto"
-        autoplay="play"
-        loop="loop"
-        muted="true"
-        poster="/img/sample.png"
-        data-setup='{"example_option":true}'>
-        <source src="//ws-shop.s3.amazonaws.com/public/files/videos/ItsHEREitsNOW_OK_1024w.mp4" type="video/mp4">
-        <source src="img/sample.webm" type="video/webm">
-      </video>
-    </div>
-  </div> -->
+  <div class="row">
+    <div class="wrapper">
 
-  <div class="box">
-    <div class="video-bg ar-16-9">
+      <div id="bideo-container">
+        <video id="bideo-bg"></video>
+        <h3>Sample D: Bideo.js, para hacer fondos de vídeo que cubran un DIV ( <a href="https://github.com/rishabhp/bideo.js" target="_blank">docs</a> )</h2>
 
-    </div>
-  </div>
+        <h4>La gracia de <b>Bideo.js</b> es hacer un background de fondo a todo el ancho x alto de la página (o de un contendor) y el vídeo <b>cubre</b> el contenedor. En IE (9, 10, 11) <a href="http://caniuse.com/#search=object-fit" target="_blank">no funciona la propiedad object-fit: cover;</a> necesaria para hacer esto por CSS puro.</h4>
 
-  <div class="box">
-    <div class="video-bg ar-16-9">
-      <iframe id="video-yt-player" frameBorder="0"></iframe>
-    </div>
-  </div>
-
+        <div class="actions">
+          <button id="bideo-play">Play</button> <button id="bideo-pause">Pause</button> <button id="bideo-mute">Mute / Unmute</button>
+        </div>
+      </div>
 
 </body>
 </html>
