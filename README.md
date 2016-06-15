@@ -1,17 +1,18 @@
-CSS-video-bg-cover
-==================
+responsive video sample blocks
+==============================
 
-CSS HTML5 Video bg that fills a container (as if using background-size: cover;). Several demos using several video sources and technologies, focusing in **maintain the aspect ratio an be responsive**.
+Catálogo de varios ejemplos de vídeo responsive, inlucído un player personalizado con **video.js** y un bloque con el vídeo de fondo con **bideo.js** (para compatibilidad con IEs).
 
-## To run the demo(s)
+## Ver la demo online
 
-It's recomended to install `harpjs` a `node.js` web server with SASS support. [Help and download here](https://harpjs.com/)
+## Recomendaciones para uso de vídeos en html5
 
-Once installed start the demo with:
+## Ejecutar en local
+
+Si quieres ejecutar las demos en local se recomienda instalar `harpjs`, un servidor web con soporte SASS basado en `node.js`. [Ayuda y descarga de harp](https://harpjs.com/)
+
+Una vez instalado arranca en servidor en la carpeta de la demo con:
 ```
 harp server
 ```
-
-## Screenshot
-
 ## TO-DO
