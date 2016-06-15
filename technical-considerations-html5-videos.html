@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS HTML5 Video BG Cover</title>
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css"/>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/video.js/5.10.5/video-js.css">
+  <link rel="stylesheet" href="css/application.css"/>
+
+</head>
+<body>
+
+  <div class="row">
+    <div class="wrapper">
+
+      <h2>Consideraciones técnicas / de UX antes de emplear vídeos en HTML5</h2>
+
+      <p>El bloque con un vídeo de fondo suele usar HTML5, y tiene varias limitaciones / características:</p>
+
+      <ul>
+        <li>Al estar de fondo podemos poner encima lo que queramos… texto, botones</li>
+        <li>Debe ser ligero para no sobrecargar la página, suele hacerse un “loop” que se repite de 10 / 20 segundos</li>
+        <li>Debe ser un vídeo solamente, hacer que sean varios que cambien es más complicado (necesita JS y puede dar más problemas, aunque puede hacerse)</li>
+        <li>Normalmente suele hacerse sin sonido, porque al no tener controles no se puede parar el sonido y es una molestia para los usuarios</li>
+        <li>En móvil / tablet / iPad directamente NO FUNCIONA, por estandar este tipo de vídeos con autoplay y sin controles están deshabilitados así que se verá recuadro negro, por ello normalmente se sustituye el vídeo por una imagen estática</li>
+      </ul>
+
+      <h2>Los formatos empleados son:</h2>
+
+      <ul>
+        <li>.mp4 = H.264 + AAC</li>
+        <li>.ogg/.ogv = Theora + Vorbis</li>
+        <li>.webm = VP8 + Vorbis</li>
+      </ul>
+
+      <h2>Enlaces y herramientas de interés</h2>
+
+      <p>
+        <a href="http://www.mirovideoconverter.com/" target="_blank">http://www.mirovideoconverter.com/</a><br>
+        <a href="http://diveintohtml5.info/video.html" target="_blank">http://diveintohtml5.info/video.html</a><br>
+        <a href="http://html5doctor.com/the-video-element/" target="_blank">http://html5doctor.com/the-video-element/</a><br>
+      </p>
+
+    </div>
+  </div>
+
+</body>
+</html>

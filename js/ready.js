@@ -111,6 +111,7 @@ $(document).ready(function() {
     muted: true,
     isMobile: window.matchMedia('(max-width: 768px)').matches,
 
+    // Use standard click events instead of this.
     // playButton: document.querySelector('#bideo-play'),
     // pauseButton: document.querySelector('#bideo-pause'),
 

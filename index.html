@@ -19,6 +19,27 @@
   <div class="row">
     <div class="wrapper">
 
+      <h2>Sample D: Bideo.js, para hacer fondos de vídeo que cubran un DIV ( <a href="https://github.com/rishabhp/bideo.js" target="_blank">docs</a> )</h2>
+
+      <div id="bideo-container">
+        <video id="bideo-bg"></video>
+        <h3>Sample D: Bideo.js, para hacer fondos de vídeo que cubran un DIV ( <a href="https://github.com/rishabhp/bideo.js" target="_blank">docs</a> )</h3>
+
+        <div class="actions">
+          <button id="bideo-play">Play</button> <button id="bideo-pause">Pause</button> <button id="bideo-mute">Mute / Unmute</button>
+        </div>
+      </div>
+
+      <p>La gracia de <b>Bideo.js</b> es hacer un background de fondo a todo el ancho x alto de la página (o de un contendor) y el vídeo <b>cubre</b> el contenedor. En IE (9, 10, 11) <a href="http://caniuse.com/#search=object-fit" target="_blank">no funciona la propiedad object-fit: cover;</a> necesaria para hacer esto por CSS puro, <b>es lo que nos soluciona Bideo.js.</b></p>
+
+      <p>Los vídeos en HTML tienen unas cuantas consideraciones técnicas, por favor, <a href="technical-considerations-html5-videos.html">consúltalas aquí</a> antes de crearlos.</p>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="wrapper">
+
       <h2>Sample A: Vídeo estándar en HTML5 sin ninguna mejora adicional</h2>
 
         <video id="video-sample-A" class="video-block" width="auto" height="auto"
@@ -84,20 +105,6 @@
 
     </div>
   </div>
-
-  <div class="row">
-    <div class="wrapper">
-
-      <div id="bideo-container">
-        <video id="bideo-bg"></video>
-        <h3>Sample D: Bideo.js, para hacer fondos de vídeo que cubran un DIV ( <a href="https://github.com/rishabhp/bideo.js" target="_blank">docs</a> )</h2>
-
-        <h4>La gracia de <b>Bideo.js</b> es hacer un background de fondo a todo el ancho x alto de la página (o de un contendor) y el vídeo <b>cubre</b> el contenedor. En IE (9, 10, 11) <a href="http://caniuse.com/#search=object-fit" target="_blank">no funciona la propiedad object-fit: cover;</a> necesaria para hacer esto por CSS puro.</h4>
-
-        <div class="actions">
-          <button id="bideo-play">Play</button> <button id="bideo-pause">Pause</button> <button id="bideo-mute">Mute / Unmute</button>
-        </div>
-      </div>
 
 </body>
 </html>
