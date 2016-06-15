@@ -1,5 +1,6 @@
 html {
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+  font-family: Hack, monospace;
 }
 
 *, *:before, *:after {
@@ -15,11 +16,20 @@ h1, h2, h3, h4, h5, h6, p, .actions {
   padding-right: 16px;
 }
 
+p {
+  line-height: 150%;
+}
+
+textarea.code {
+  width: 90%; margin: 16px;
+  height: 110px;
+}
+
 a {
-  color: orange;
+  color: darkorange;
   &:active,
   &:visited {
-    color: orange;
+    color: darkorange;
   }
 }
 
@@ -54,7 +64,8 @@ ul {
   }
 }
 
-video.video-block {
+video {
+  display: block;
   width: 100%;
 }
 
@@ -119,12 +130,14 @@ video.video-block {
 }
 
 /* Tis kind of BG video are no visible en iOS / Android so we replace it by an static image*/
-@media only screen and (max-device-width: 799px) {
+@media only screen and (max-width: 799px) {
   #bideo-container {
+    background: pink url('http://placehold.it/640x360?text=Fallback+image.jpg') center center no-repeat;
+    background-size: cover;
+
     video#bideo-bg {
       visibility: hidden;
-      background: pink url(http://placehold.it/640x360?text=Fallback+image.jpg) center center no-repeat;
-      background-size: cover;
+      opacity: 0;
     }
   }
 }

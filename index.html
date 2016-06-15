@@ -4,9 +4,13 @@
   <meta charset="UTF-8">
   <title>CSS HTML5 Video BG Cover</title>
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css"/>
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/video.js/5.10.5/video-js.css">
   <link rel="stylesheet" href="css/application.css"/>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.020/css/hack.min.css">
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/video.js/5.10.5/video.js"></script>
@@ -91,7 +95,7 @@
   <div class="row">
     <div class="wrapper">
 
-      <h2>Sample C: Youtube Iframe API ( <a href="https://developers.google.com/youtube/iframe_api_reference#Getting_Started" target="_blank">docs</a> )</h2>
+      <h2>Sample C: Youtube Iframe API, Incrustar el vídeo desde JS ( <a href="https://developers.google.com/youtube/iframe_api_reference#Getting_Started" target="_blank">docs</a> )</h2>
 
       <div class="video-container ar-16-9">
         <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
@@ -101,6 +105,29 @@
       <p>Insertar los vídeos de youtube con la API nos permite controlarlos desde JS. <a href="http://docs.videojs.com/docs/api/player.html" target="_blank">Información sobre la API JS.</a></p>
       <div class="actions">
         <button id="video-yt-play">Play</button> <button id="video-yt-pause">Pause</button> <button id="video-yt-mute">Mute / Unmute</button>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="wrapper">
+
+      <h2>Sample E: Youtube Iframe estándar ( pero controlable desde JS )</h2>
+
+      <div class="video-container ar-16-9">
+        <iframe id="video-sample-E" src="//www.youtube.com/embed/YE7VzlLtp-4?autoplay=1&enablejsapi=1&version=3" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <p>El truco de este forma de incrustar el vídeo de esta forma, y que todavía sea controlable desde JS es añadir un par de parámetros a la URL <b>&enablejsapi=1&version=3</b>. Revisa también el <b>ready.js</b> para ver como se attachean los eventos.</p>
+
+      <textarea class="code">
+<div class="video-container ar-16-9">
+  <iframe id="video-sample-E" src="//www.youtube.com/embed/YE7VzlLtp-4?autoplay=1&enablejsapi=1&version=3" frameborder="0" allowfullscreen></iframe>
+</div>
+      </textarea class="code">
+      <div class="actions">
+        <button id="video-yt-embed-play">Play</button> <button id="video-yt-embed-pause">Pause</button> <button id="video-yt-embed-mute">Mute / Unmute</button>
       </div>
 
     </div>

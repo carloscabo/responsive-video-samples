@@ -60,7 +60,9 @@ $(document).ready(function() {
 
   // Replace the 'ytplayer' element with an <iframe> and
   // YouTube player after the API code downloads.
-  var yt_player;
+  var
+    vsE, // Video sample-E
+    yt_player;
   window.onYouTubePlayerAPIReady = function() {
     yt_player = new YT.Player('video-yt-player', {
       // width: '640',
@@ -86,6 +88,26 @@ $(document).ready(function() {
           yt_player.mute(); // mute
         }
       });
+
+      /* SAMPLE E */
+      vsE = new YT.Player('video-sample-E');
+      $(document)
+        .on('click', '#video-yt-embed-play', function(e) {
+          e.preventDefault();
+          vsE.playVideo();
+        })
+        .on('click', '#video-yt-embed-pause', function(e) {
+          e.preventDefault();
+          vsE.pauseVideo();
+        })
+        .on('click', '#video-yt-embed-mute', function(e) {
+          e.preventDefault();
+          if ( vsE.isMuted() ) {
+            vsE.unMute(); // unmute
+          } else {
+            vsE.mute(); // mute
+          }
+        });
   };
 
   // Load the IFrame Player API code asynchronously.
