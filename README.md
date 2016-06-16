@@ -5,7 +5,11 @@ Catálogo de varios ejemplos de vídeo responsive, inlucído un player personali
 
 ## Ver la demo online
 
+[Demo online](https://rawgit.com/carloscabo/responsive-video-samples/master/index.html)
+
 ## Recomendaciones para uso de vídeos en html5
+
+[Recomendaciones para el uso de vídeos HTML5](https://rawgit.com/carloscabo/responsive-video-samples/master/technical-considerations-html5-videos.html)
 
 ## Ejecutar en local
 
