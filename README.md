@@ -1,7 +1,7 @@
 responsive video sample blocks
 ==============================
 
-Catálogo de varios ejemplos de vídeo responsive, inlucído un player personalizado con **video.js** y un bloque con el vídeo de fondo con **bideo.js** (para compatibilidad con IEs).
+Catálogo de varios ejemplos de vídeo responsive, incluído un player personalizado con **video.js** y un bloque con el vídeo de fondo con **bideo.js** (para compatibilidad con IEs).
 
 ## Ver la demo online
 
